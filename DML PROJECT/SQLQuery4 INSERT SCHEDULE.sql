@@ -4,7 +4,7 @@ USE PV_521_Import;
 SELECT* FROM Schedule;
 --SELECT *FROM Teachers;
 --SELECT *FROM Disciplines;
-SELECT *FROM Holidays;
+--SELECT *FROM Holidays;
 
 --SELECT* FROM Groups;
 

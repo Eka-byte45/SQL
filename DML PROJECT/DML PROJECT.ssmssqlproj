@@ -21,6 +21,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="SQLQuery FOR  EXPIRIENCE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery FOR  EXPIRIENCE.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1-INSERT DIRECTION.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
@@ -56,6 +62,12 @@
           <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery4 INSERT SCHEDULE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4- SELECTAggregateStudentsAndGroups.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4- SELECTAggregateStudentsAndGroups.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

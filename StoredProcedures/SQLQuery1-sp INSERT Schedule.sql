@@ -79,25 +79,28 @@ PRINT(@start_time);
 
 --В цикле перебираем занятие по номеру, определяем дату и время каждого занятия
 DECLARE @date			AS DATE		= @start_date;
-DECLARE @lesson_number  AS TINYINT  = 1;
---DECLARE @time AS TIME = @start_time;
+DECLARE @lesson_number  AS TINYINT  = dbo.CountLessons(@group,@discipline);
+DECLARE @time AS TIME = @start_time;
 WHILE @lesson_number < @number_of_lessons
 BEGIN
-		--SET @time=@start_time;
-		DECLARE @time AS TIME	=	@start_time;
+		  SET @time=@start_time;
+		--DECLARE @time AS TIME	=	@start_time;
 		--PRINT(FORMATMESSAGE(N'%i  %s  %s  %s',@lesson_number,CAST(@date AS VARCHAR(24)),DATENAME(WEEKDAY,@date),CAST(@time AS VARCHAR(24))));
 		--IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [date]=@date AND [time]=@time AND [group]=@group)
 			--INSERT Schedule VALUES(@group,@discipline,@teacher,@date,@time,IIF(@date<GETDATE(),1,0));
-		EXEC sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,NULL, @lesson_number = @lesson_number OUTPUT;
+		--EXEC sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,NULL, @lesson_number = @lesson_number OUTPUT;
+		EXEC	sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,@lesson_number OUTPUT;
 
 		--SET @lesson_number = @lesson_number + 1;
 		--SET @time = DATEADD(MINUTE,95,@start_time);
 
-		PRINT(FORMATMESSAGE(N'%i  %s  %s  %s',@lesson_number,CAST(@date AS VARCHAR(24)),DATENAME(WEEKDAY,@date),CAST(@time AS VARCHAR(24))));
+		--PRINT(FORMATMESSAGE(N'%i  %s  %s  %s',@lesson_number,CAST(@date AS VARCHAR(24)),DATENAME(WEEKDAY,@date),CAST(@time AS VARCHAR(24))));
 		--IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [date]=@date AND [time]=@time AND [group]=@group)
 			--INSERT Schedule VALUES(@group,@discipline,@teacher,@date,@time,IIF(@date<GETDATE(),1,0));
-		EXEC sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,NULL, @lesson_number = @lesson_number OUTPUT;
+		--EXEC sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,NULL, @lesson_number = @lesson_number OUTPUT;
 		--SET @lesson_number = @lesson_number + 1;
+		EXEC	sp_InsertLesson @group,@discipline,@teacher,@date,@time OUTPUT,@lesson_number OUTPUT;
+
 
 		DECLARE @day AS TINYINT = DATEPART(WEEKDAY,@date);
 		--PRINT(@day);

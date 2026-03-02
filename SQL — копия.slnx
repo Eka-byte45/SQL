@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Version 22
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DDL", "DDL\DDL.ssmssqlproj", "{934EBEDF-F93F-0D42-36EB-DD028C4675FF}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DML PROJECT", "DML PROJECT\DML PROJECT.ssmssqlproj", "{D583D529-E5E7-629C-3F2D-8F095FB20B96}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Functions", "Functions\Functions.ssmssqlproj", "{DF88320E-56A8-FC30-6AE4-8DC661ADAF0C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQL", "SQL\SQL.ssmssqlproj", "{48303EC9-E047-1D1C-5BF6-F67BC397D26A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "StoredProcedures", "StoredProcedures\StoredProcedures.ssmssqlproj", "{DA24D977-2B5A-D1E0-6910-3EB56872C6D8}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "TransactSQL", "TransactSQL\TransactSQL.ssmssqlproj", "{8C78D05F-9FDC-7F1A-65AA-4C678CBD3D1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{934EBEDF-F93F-0D42-36EB-DD028C4675FF}.Default|Default.ActiveCfg = Default
+		{D583D529-E5E7-629C-3F2D-8F095FB20B96}.Default|Default.ActiveCfg = Default
+		{DF88320E-56A8-FC30-6AE4-8DC661ADAF0C}.Default|Default.ActiveCfg = Default
+		{48303EC9-E047-1D1C-5BF6-F67BC397D26A}.Default|Default.ActiveCfg = Default
+		{DA24D977-2B5A-D1E0-6910-3EB56872C6D8}.Default|Default.ActiveCfg = Default
+		{8C78D05F-9FDC-7F1A-65AA-4C678CBD3D1F}.Default|Default.ActiveCfg = Default
+		{36EB4A55-AD96-42E5-80DE-C985D2938032}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {224EC73C-CA2F-4BB1-8F74-8D548EC29D07}
+	EndGlobalSection
+EndGlobal

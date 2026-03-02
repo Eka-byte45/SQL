@@ -1,0 +1,104 @@
+--SQLQuery1 - HW.sql
+USE PV_521_Import;
+
+--Ïèøó çàïðîñ, êîòîðûé áóäåò âîçâðàùàòü ìíå äàòó ïîñëåäíåãî çàíÿòèÿ èç òàáëèöû Schedule ïî íàçâàíèþ ãðóïïû
+--SELECT MAX([date]) FROM Schedule WHERE [group]=521;
+--EXEC sp_SelectScheduleFor N'PV_521';
+
+--ÔÓÍÊÖÈß,ÊÎÒÎÐÀß ÂÎÇÂÐÀÙÀÅÒ ÄÀÒÓ ÏÎÑËÅÄÍÅÃÎ ÇÀÍßÒÈß Ó ÄÀÍÍÎÉ ÃÐÓÏÏÛ
+--GO
+--CREATE OR ALTER FUNCTION dbo.GetLastLearningDate(@group_id AS INT) RETURNS DATE
+--AS
+--BEGIN
+--	RETURN (SELECT MAX([date]) FROM Schedule WHERE [group]=@group_id);
+--END
+
+
+--SELECT dbo.GetlastLearningDate(521);
+
+----Çàïðîñ, êîòîðûé âîçâðàùàåò ó÷åáíûå äíè ïî áèòîâîé ìàñêå äëÿ ãðóïïû 521
+--SELECT weekdays FROM Groups WHERE group_name ='PV_521';
+
+--ÔÓÍÊÖÈß, ÊÎÒÎÐÀß ÂÎÇÂÐÀÙÀÅÒ ÁÈÒÎÂÓÞ ÌÀÑÊÓ ÏÎ ÊÎÒÎÐÎÉ ÏÐÅÄÑÒÀÂËÅÍÛ ÄÍÈ ÍÅÄÅËÈ, Â ÊÎÒÎÐÎÉ ÎÁÓ×ÀÞÒÑ ÑÒÓÄÅÍÒÛ
+--GO
+--CREATE OR ALTER FUNCTION dbo.GetStudyDaysMask(@group_id AS INT) RETURNS TINYINT
+--AS BEGIN
+--	DECLARE @study_days_mask TINYINT;
+--	SELECT @study_days_mask = weekdays FROM Groups WHERE group_id=@group_id;
+--	RETURN @study_days_mask;
+--END
+
+--ÔÓÍÊÖÈß, ÊÎÒÎÐÀß ÎÏÐÅÄÅËßÅÒ Â ÊÀÊÎÉ ÄÅÍÜ ÍÅÄÅËÈ ÁÓÄÅÒ ÑËÅÄÓÞÙÅÅ ÇÀÍßÒÈÅ Ó ÃÐÓÏÏÛ
+--GO
+--CREATE OR ALTER FUNCTION dbo.GetNextLearningDay (@group_id AS INT) RETURNS TINYINT
+--AS
+--BEGIN
+--    DECLARE @last_lesson_date DATE;--ÄÀÒÀ ÏÎÑËÅÄÍÅÃÎ ÇÀÍßÒÈß Ó ÃÐÓÏÏÛ
+--    DECLARE @study_days_mask TINYINT;--ÁÈÒÎÂÀß ÌÀÑÊÀ Ó×ÅÁÍÛÕ ÄÍÅÉ ÃÐÓÏÏÛ
+--    DECLARE @next_lesson_date DATE; --ÄÀÒÀ ÑËÅÄÓÞÙÅÃÎ ÇÀÍßÒÈß
+
+--    -- Çäåñü íàõîäèì ïîñëåäíþþ äàòó çàíÿòèÿ ãðóïïû
+--    SET @last_lesson_date = dbo.GetLastLearningDate(@group_id);
+
+--    SET @study_days_mask = dbo.GetStudyDaysMask(@group_id);
+
+--    -- Ñëåäóþùèé äåíü ïîñëå ïîñëåäíåãî çàíÿòèÿ
+--    DECLARE @current_date DATE = DATEADD(DAY, 1, @last_lesson_date);
+
+--    WHILE 1=1--áåñêîíå÷íûé öèêë
+--    BEGIN
+--        DECLARE @week_day_number TINYINT = DATEPART(WEEKDAY, @current_date);
+
+--        -- Ïðîâåðÿåì, ñîîòâåòñòâóåò ëè äåíü ìàñêå ó÷åáíûõ äíåé
+--        IF ((@study_days_mask & POWER(2, @week_day_number)) > 0)
+--        BEGIN
+--            SET @next_lesson_date = @current_date;
+--            BREAK;
+--        END
+
+--        -- Ïåðåáåðàåì äàëåå
+--        SET @current_date = DATEADD(DAY, 1, @current_date);
+--    END
+
+--    --Çäåñü âîçâðàùàåì íàçâàíèå äíÿ íåäåëè
+--    RETURN DATEPART(WEEKDAY, @next_lesson_date);
+--END
+--GO
+
+--SELECT dbo.GetNextLearningDay(521); 
+
+--ÔÓÍÊÖÈß, ÊÎÒÎÐÀß ÎÏÐÅÄÅËßÅÒ ÄÀÒÓ ÑËÅÄÓÞÙÅÃÎ ÇÀÍßÒÈß Ó ÃÐÓÏÏÛ
+
+--GO
+--CREATE OR ALTER FUNCTION dbo.GetNextLearningDate (@group_id AS INT) RETURNS DATE
+--AS
+--BEGIN
+--    DECLARE @last_lesson_date DATE;--ÄÀÒÀ ÏÎÑËÅÄÍÅÃÎ ÇÀÍßÒÈß Ó ÃÐÓÏÏÛ
+--    DECLARE @study_days_mask TINYINT;--ÁÈÒÎÂÀß ÌÀÑÊÀ Ó×ÅÁÍÛÕ ÄÍÅÉ ÃÐÓÏÏÛ
+--    DECLARE @next_lesson_date DATE; --ÄÀÒÀ ÑËÅÄÓÞÙÅÃÎ ÇÀÍßÒÈß
+
+--    -- Çäåñü íàõîäèì ïîñëåäíþþ äàòó çàíÿòèÿ ãðóïïû
+--    SET @last_lesson_date = dbo.GetLastLearningDate(@group_id);
+
+--    SET @study_days_mask = dbo.GetStudyDaysMask(@group_id);
+
+--    -- Ñëåäóþùèé äåíü ïîñëå ïîñëåäíåãî çàíÿòèÿ
+--    DECLARE @current_date DATE = DATEADD(DAY, 1, @last_lesson_date);
+
+--    WHILE 1=1--áåñêîíå÷íûé öèêë
+--    BEGIN
+--        DECLARE @week_day_number TINYINT = DATEPART(WEEKDAY, @current_date);
+
+--        -- Ïðîâåðÿåì, ñîîòâåòñòâóåò ëè äåíü ìàñêå ó÷åáíûõ äíåé
+--        IF ((@study_days_mask & POWER(2, @week_day_number)) > 0)
+--        BEGIN
+--            SET @next_lesson_date = @current_date;
+--            BREAK;
+--        END
+--        SET @current_date = DATEADD(DAY, 1, @current_date);
+--    END
+--    RETURN @next_lesson_date;
+--END
+--GO
+
+--SELECT dbo.GetNextLearningDate(521); 

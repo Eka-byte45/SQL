@@ -28,8 +28,8 @@
           <FullPath>SQLQuery0 - Chek.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery1 - GetNextLearningDay.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery1 - GetNextLearningDay.sql</FullPath>
         </FileNode>
@@ -44,6 +44,18 @@
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>SQLQuery1 -COUNT lessons.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1 -GetNextLearningDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1 -GetNextLearningDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2  CREATE Holidays.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2  CREATE Holidays.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

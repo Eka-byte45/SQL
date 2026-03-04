@@ -8,3 +8,8 @@ SET DATEFIRST 1;
 --EXEC sp_InsertScheduleStacionar N'PV_521',N'%Сетевое%',N'Олег',N'2026-02-18';
 --EXEC sp_SelectScheduleFor N'PV_521';
 
+--EXEC sp_InsertScheduleStacionar2 N'PV_521', N'Язык программирования C#', N'Олег', N'2026-06-01';
+--EXEC sp_SelectScheduleFor N'PV_521';
+--SELECT *FROM Disciplines;
+
+

@@ -27,11 +27,35 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery0 - Chek.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery0-HolidaysCheck.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery0-HolidaysCheck.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1 - CREATE PROCEDURE INSERT IN  DaysOFF.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1 - CREATE PROCEDURE INSERT IN  DaysOFF.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1 - GetHolidayStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1 - GetHolidayStartDate.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1 - GetNextLearningDay.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery1 - GetNextLearningDay.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1 - GetStartSummerHolidaysDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1 - GetStartSummerHolidaysDate.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery1 - HW.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
@@ -56,6 +80,12 @@
           <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery2  CREATE Holidays.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7 - GetNewYearStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-GEV04OF\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-GEV04OF\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7 - GetNewYearStartDate.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

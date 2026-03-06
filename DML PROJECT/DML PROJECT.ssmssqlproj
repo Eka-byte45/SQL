@@ -69,6 +69,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery4- SELECTAggregateStudentsAndGroups.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery7 -SELECT DaysOFF.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7 -SELECT DaysOFF.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">

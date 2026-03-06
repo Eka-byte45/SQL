@@ -13,4 +13,5 @@ SET DATEFIRST 1;
 --EXEC sp_AddHolidays 2026, '23 Февраля';
 --EXEC sp_AddHolidays 2026, '8 Марта';
 --EXEC sp_AddHolidays 2026, 'День народного единства';
-SELECT *FROM DaysOFF;
+PRINT dbo.GetSummerHolidaysStartDate(2023);
+--SELECT *FROM DaysOFF;

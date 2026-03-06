@@ -12,4 +12,12 @@ SET DATEFIRST 1;
 --EXEC sp_SelectScheduleFor N'PV_521';
 --SELECT *FROM Disciplines;
 
-
+EXEC sp_InsertAllHolidaysFor 2028;
+SELECT 
+	[Дата] = date,
+	[Праздник] =  holiday_name
+FROM DaysOFF,Holidays
+WHERE holiday = holiday_id
+AND date >= DATEFROMPARTS(2027,12,20);
+;
+ 

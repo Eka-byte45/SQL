@@ -1,4 +1,4 @@
---SQLQuery1 - GetSummerHolidaysStartDate.sql
+--SQLQuery7 - GetSummerHolidaysStartDate.sql
 
 USE PV_521_Import;
 

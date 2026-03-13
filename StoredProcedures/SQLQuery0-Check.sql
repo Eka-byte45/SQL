@@ -13,9 +13,9 @@ SET DATEFIRST 1;
 --EXEC sp_InsertScheduleStacionar N'PV_521',N'%ASP.NET',N'Олег',DEFAULT;
 --EXEC sp_InsertScheduleStacionar N'PV_521',N'',N'Олег',DEFAULT;
 --EXEC sp_InsertScheduleStacionar N'PV_521',N'%MS SQL Server',N'Олег',N'2025-12-24';
-EXEC sp_InsertSchedule1221 N'PV_521',N'Hardware%',N'Свищев',N'2025-01-20',1,3,5;
-EXEC sp_InsertSchedule1221 N'PV_521',N'%Windows',N'Свищев',N'2025-04-30',1,3,5;
-EXEC sp_InsertSchedule1221 N'PV_521',N'Процедурное%C++',N'Ковтун',N'2025-01-20',5,3,1;
+--EXEC sp_InsertSchedule1221 N'PV_521',N'Hardware%',N'Свищев',N'2025-01-20',1,3,1;
+--EXEC sp_InsertSchedule1221 N'PV_521',N'%Windows',N'Свищев',N'2025-04-30',1,3,1;
+--EXEC sp_InsertSchedule1221 N'PV_521',N'Процедурное%C++',N'Ковтун',N'2025-01-20',5,3,0;
 EXEC sp_SelectScheduleFor N'PV_521';
 
 --EXEC sp_InsertScheduleStacionar2 N'PV_521', N'Язык программирования C#', N'Олег', N'2026-06-01';
